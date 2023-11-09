@@ -3,7 +3,6 @@ import './Todo.css'
 
 const generateId = () => {
     const newId = (Math.random() * 10);
-    // console.log(newId);
     return newId;
 }
 
@@ -37,9 +36,9 @@ const removeTodo = (id: number) => setTodos((todos)=> todos.filter((todo) => tod
             {
                 todos.map(({text,id}) => 
                      (
-                    <li key={id}>
+                    <li className="todo" key={id}>
                         <span>{text}</span>
-                        <button onClick={()=> removeTodo(id)}>X</button>
+                        <button className="close" onClick={()=> removeTodo(id)}>X</button>
                     </li>
                     ))
 }
